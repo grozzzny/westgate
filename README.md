@@ -9,6 +9,7 @@ $ php composer.phar require grozzzny/westgate "dev-master"
 ### Get token
 http://goods.tpzk.ru
 
+### Set config and token
 \config\web.php
 
 ```php
@@ -32,6 +33,9 @@ $config = [
 return $config;
 
 ```
+
+### Examples
+
 List items:
 ```php
 $client = Yii::$app->westgate->itemIndexClient
