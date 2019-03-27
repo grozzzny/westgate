@@ -6,6 +6,9 @@ Westgate component for yii2 - westgate.market
 $ php composer.phar require grozzzny/westgate "dev-master"
 ```
 
+### Get token
+http://goods.tpzk.ru
+
 \config\web.php
 
 ```php
