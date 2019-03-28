@@ -16,14 +16,14 @@ class PassportInnClient extends BaseClient
         return $response;
     }
 
-    public function passportParams($fio, $birthdate, $docnum, $docdt, $dcode)
+    public function passportParams($name, $date_of_birth, $passport, $passport_date, $passport_code)
     {
         return $this->addParams([
-            'fio' => $fio,
-            'birthdate' => $birthdate,
-            'docnum' => $docnum,
-            'docdt' => $docdt,
-            'dcode' => $dcode,
+            'name' => $name,
+            'date_of_birth' => $date_of_birth,
+            'passport' => $passport,
+            'passport_date' => $passport_date,
+            'passport_code' => $passport_code,
         ]);
     }
 }
