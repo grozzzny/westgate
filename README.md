@@ -19,7 +19,7 @@ $config = [
     'components' => [
         ...
         'westgate' => [
-            'class' => 'grozzzny\westgate\westgateComponent',
+            'class' => 'grozzzny\westgate\WestgateComponent',
             'token' => 'qwertyuiop1234567890',
             //'itemObject' => 'main\models\ItemObject',
             //'categoryObject' => 'main\models\CategoryObject',
