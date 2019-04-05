@@ -9,6 +9,16 @@ use yii\base\Model;
 
 class Order extends Model
 {
+    const STATUS_WAITING = 'waiting';
+    const STATUS_PROCESSING = 'processing';
+    const STATUS_SENT = 'sent';
+    const STATUS_COMPLETED = 'completed';
+    const STATUS_FAIL = 'fail';
+    const STATUS_REMOVE = 'remove';
+
+    const PAID_STATUS = true;
+    const PAID_STATUS_NOT = false;
+
     public $_id;
     public $id;
     public $number;
@@ -21,6 +31,7 @@ class Order extends Model
     public $updated_at;
     public $new;
     public $status;
+    public $paid_status;
 
     public $items;
     public $count;
