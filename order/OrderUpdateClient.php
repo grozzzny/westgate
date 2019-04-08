@@ -5,24 +5,20 @@ namespace grozzzny\westgate\order;
 
 
 use grozzzny\westgate\BaseClient;
-use grozzzny\westgate\order\Order;
-use Yii;
 
 /**
- * Class OrderViewClient
+ * Class OrderCreateClient
  * @package grozzzny\westgate\order
  *
  */
-class OrderViewClient extends BaseClient
+class OrderUpdateClient extends BaseClient
 {
     const OBJECT = 'order';
-    const METHOD = 'view';
+    const METHOD = 'update';
 
     public function response($response)
     {
-        $class = empty($this->component->orderObject) ? Order::className() : $this->component->orderObject;
-
-        return Yii::createObject($class, [$response]);
+        return $response[0]['response'];
     }
 
     public function number($number)
@@ -35,8 +31,8 @@ class OrderViewClient extends BaseClient
         return $this->addParams(['id' => $id]);
     }
 
-    public function user(array $params)
+    public function attributes($attributes)
     {
-        return $this->addParams(['user' => $params]);
+        return $this->addParams($attributes);
     }
 }

@@ -7,6 +7,7 @@ use grozzzny\westgate\item\ItemViewClient;
 use grozzzny\westgate\item\ItemIndexClient;
 use grozzzny\westgate\order\OrderCreateClient;
 use grozzzny\westgate\order\OrderIndexClient;
+use grozzzny\westgate\order\OrderUpdateClient;
 use grozzzny\westgate\order\OrderViewClient;
 use grozzzny\westgate\passport\PassportInnClient;
 use yii\base\Component;
@@ -19,6 +20,7 @@ use yii\base\Component;
  * @property-read ItemViewClient $itemViewClient
  * @property-read OrderCreateClient $orderCreateClient
  * @property-read OrderViewClient $orderViewClient
+ * @property-read OrderUpdateClient $orderUpdateClient
  * @property-read OrderIndexClient $orderIndexClient
  * @property-read PassportInnClient $passportInnClient
  */
@@ -51,6 +53,11 @@ class WestgateComponent extends Component
     public function getOrderViewClient()
     {
         return new OrderViewClient();
+    }
+
+    public function getOrderUpdateClient()
+    {
+        return new OrderUpdateClient();
     }
 
     public function getOrderIndexClient()

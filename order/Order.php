@@ -44,10 +44,21 @@ class Order extends Model
     public $amount;
     public $seller;
 
-    public function send()
+    public function create()
     {
         $response = Yii::$app->westgate
             ->orderCreateClient
+            ->attributes($this->attributes)
+            ->send();
+
+        return $this->number = $response['number'];
+    }
+
+    public function update()
+    {
+        $response = Yii::$app->westgate
+            ->orderUpdateClient
+            ->number($this->number)
             ->attributes($this->attributes)
             ->send();
 
