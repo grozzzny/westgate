@@ -24,6 +24,7 @@ class Item extends Model
     public $updated_at;
     public $status;
     public $discount;
+    public $weight;
 
     /**
      * @var array = [
