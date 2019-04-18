@@ -104,6 +104,9 @@ class Order extends Model
     public $amount;
     public $seller;
 
+    /** @var array */
+    public $track_numbers;
+
     public function create()
     {
         $response = Yii::$app->westgate
