@@ -10,6 +10,7 @@ use grozzzny\westgate\order\OrderIndexClient;
 use grozzzny\westgate\order\OrderUpdateClient;
 use grozzzny\westgate\order\OrderViewClient;
 use grozzzny\westgate\passport\PassportInnClient;
+use grozzzny\westgate\track\TrackStatusClient;
 use yii\base\Component;
 
 /**
@@ -23,6 +24,7 @@ use yii\base\Component;
  * @property-read OrderUpdateClient $orderUpdateClient
  * @property-read OrderIndexClient $orderIndexClient
  * @property-read PassportInnClient $passportInnClient
+ * @property-read TrackStatusClient $trackStatusClient
  */
 class WestgateComponent extends Component
 {
@@ -68,5 +70,10 @@ class WestgateComponent extends Component
     public function getPassportInnClient()
     {
         return new PassportInnClient();
+    }
+
+    public function getTrackStatusClient()
+    {
+        return new TrackStatusClient();
     }
 }
