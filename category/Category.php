@@ -16,5 +16,6 @@ class Category extends Model
     public $status;
     public $subcategories = [];
     public $filters = [];
+    public $filtersProperties = [];
     public $breadcrumb = [];
 }
