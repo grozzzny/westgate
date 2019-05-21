@@ -35,6 +35,33 @@ class Item extends Model
      * ]
      */
     public $seller = [];
+
+    /**
+     * @var array = [
+     *     'dataProperties' => [
+     *         'attribute' => [
+     *             'value' => 'null',
+     *             'label' => 'string',
+     *             'type' => 'string | integer | select | checkbox | html | category | multicategory | itemscategory | datetime | image | file | code',
+     *             'settings' => [
+     *                 'group' => 'my_group',
+     *                 'scenarios' => 'user',
+     *                 'description' => '',
+     *                 'example_1' => '',
+     *                 'example_2' => '',
+     *                 'filter_show' => true,
+     *                 'filter_show_admin' => true,
+     *                 'characteristic' => true,
+     *                 'multiple' => true,
+     *                 'variations' => true,
+     *             ],
+     *             'options' => [
+     *                 'key' => 'value'
+     *             ],
+     *         ]
+     *     ],
+     * ]
+     */
     public $dataProperties = [];
 
     /**
@@ -48,6 +75,28 @@ class Item extends Model
      *          'price' => 3333,
      *          'stock' => "main_stock",
      *          'uid' => "WG00000234",
+     *          'dataProperties' => [
+     *              'attribute' => [
+     *                  'value' => 'null',
+     *                  'label' => 'string',
+     *                  'type' => 'string | integer | select | checkbox | html | category | multicategory | itemscategory | datetime | image | file | code',
+     *                  'settings' => [
+     *                      'group' => 'my_group',
+     *                      'scenarios' => 'user',
+     *                      'description' => '',
+     *                      'example_1' => '',
+     *                      'example_2' => '',
+     *                      'filter_show' => true,
+     *                      'filter_show_admin' => true,
+     *                      'characteristic' => true,
+     *                      'multiple' => true,
+     *                      'variations' => true,
+     *                  ],
+     *                  'options' => [
+     *                      'key' => 'value'
+     *                  ],
+     *              ]
+     *          ],
      *      ]
      * ]
      */
