@@ -21,6 +21,12 @@ class ItemProvider extends DefaultProvider
 {
     private $_category;
 
+    /** @var integer */
+    public $price_min;
+
+    /** @var integer */
+    public $price_max;
+
     public function setCategory($value)
     {
         $this->_category = $value;

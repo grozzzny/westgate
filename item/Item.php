@@ -25,6 +25,8 @@ class Item extends Model
     public $status;
     public $discount;
     public $weight;
+    public $price_min;
+    public $price_max;
 
     /**
      * @var array = [
