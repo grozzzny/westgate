@@ -30,6 +30,32 @@ class ItemIndexClient extends ProviderClient
         return $this->addParams(['search_text' => $value]);
     }
 
+    public function priceRange($price_from = null, $price_to = null)
+    {
+        if(!empty($price_from)) $this->addParams(['price_from' => $price_from]);
+        if(!empty($price_to)) $this->addParams(['price_to' => $price_to]);
+
+        return $this;
+    }
+
+    public function properties($params)
+    {
+        foreach ($params as $param => $val){
+            $this->addParams([$param => $val]);
+        }
+
+        return $this;
+    }
+
+    public function allParams($params)
+    {
+        foreach ($params as $param => $val){
+            $this->addParams([$param => $val]);
+        }
+
+        return $this;
+    }
+
     public function ids(array $value)
     {
         return $this->addParams(['id' => $value]);
