@@ -75,7 +75,16 @@ class Item extends Model
      *          'item_id' => 66,
      *          'user_id' => 66,
      *          'price' => 3333,
-     *          'stock' => "main_stock",
+     *          'stock' => [
+     *              'user_id' => 14,
+     *              'id' => 1,
+     *              'slug' => "main_stock",
+     *              'name' => "Главный склад",
+     *              'country' => "Россия",
+     *              'region' => "Калининградская область",
+     *              'city' => "Калининград",
+     *              'address' => "Вагоностроительная"
+     *          ],
      *          'uid' => "WG00000234",
      *          'dataProperties' => [
      *              'attribute' => [
