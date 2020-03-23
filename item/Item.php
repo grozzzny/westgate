@@ -4,9 +4,6 @@
 namespace grozzzny\westgate\item;
 
 
-use grozzzny\lang\models\Lang;
-use main\components\LangHelper;
-use Yii;
 use yii\base\Model;
 
 class Item extends Model
@@ -116,17 +113,4 @@ class Item extends Model
      */
     public $variations = [];
     public $vendor_code;
-
-    public function getTitle()
-    {
-        return LangHelper::translate($this->title);
-    }
-    public function getShort()
-    {
-        return LangHelper::translate($this->short);
-    }
-    public function getDescription()
-    {
-        return LangHelper::translate($this->description);
-    }
 }
